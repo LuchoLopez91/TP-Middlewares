@@ -4,5 +4,5 @@ module.exports = (req,res,next) => {
     if(admins.includes(req.query.admin)){
         next()
     }
-    return res.redirect("/")
+    res.send("No tienes los privilegios para ingresar")
 }
